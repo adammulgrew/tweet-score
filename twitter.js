@@ -1,5 +1,6 @@
 require('dotenv').config();
 var Twitter = require('twitter');
+var jsonfile = require('jsonfile');
 
 
 var client = new Twitter({
@@ -9,11 +10,29 @@ var client = new Twitter({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-var stream = client.stream('statuses/filter', {track: 'Ghost in the Shell, #GhostintheShell'});
-stream.on('data', function(event) {
-  console.log(event && event.text);
+// var stream = client.stream('statuses/filter', {track: 'Ghost in the Shell, #GhostintheShell'});
+// stream.on('data', function(event) {
+//   console.log(event && event.text);
+// });
+ 
+// stream.on('error', function(error) {
+//   throw error;
+// });
+
+var file = './data.json';
+client.get('search/tweets', {q: 'Ghost in the Shell, #GhostintheShell', lang: 'en'}, function(error, tweets, response) {
+   console.log(tweets);
+	   jsonfile.writeFile(file, tweets.statuses.map(function(tweet, i){ 
+	   	return  {
+             "language": "en",
+             "id": i,
+             "text": tweet.text
+         }
+	   }), function (err) {
+		  	console.error(err)
+		});
+
 });
  
-stream.on('error', function(error) {
-  throw error;
-});
+
+ 
