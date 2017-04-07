@@ -1,0 +1,59 @@
+// Path alias
+$assetPath:                '/content';
+$uiImgPath:                '#{$assetPath}/img';
+
+// Colors
+// -------------------------
+$body-font-color:           #fff !default;
+
+$primary:					#FEDA6A !default;
+$secondary:					#393F4D !default;
+
+
+// Type
+// --------------------------------------------------
+// Font weights
+$thin:                      100;
+$light:                     300;
+$regular:                   400;
+$semibold:                  600;
+$bold:                      700;
+$thick:                     800;
+
+$baseline:                  1.5rem !default;
+$base-font-family:          'Myriad W01', sans-serif !default;
+$base-font-weight:          $regular !default;
+$base-font-size:            100% !default;
+$base-line-height:          1.5 !default;
+
+$body-font-family:       	$base-font-family !default;
+$header-font-family:        $base-font-family !default;
+
+// Sizes
+$tera-size:                 ms(9) !default;
+$giga-size:                 ms(7) !default;
+$mega-size:                 ms(6) !default;
+$alpha-size:                ms(5) !default;
+$beta-size:                 ms(4) !default;
+$gamma-size:                ms(3) !default;
+$delta-size:                ms(2) !default;
+$epsilon-size:              ms(1) !default;
+
+
+// Layout
+// --------------------------------------------------
+$max-container-width:       1000px !default;
+$gutter:				    30px !default;
+$columns:                   12 !default;
+
+// Shared
+$border-radius:             0 !default;
+$border-color:              none !default;
+$border-width:              0 !default;
+
+// Breakpoints
+// --------------------------------------------------
+$bp-xsmall:                 32em !default;
+$bp-small:                  48em !default;
+$bp-medium:                 65em !default;
+$bp-large:                  $max-container-width !default;

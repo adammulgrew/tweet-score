@@ -1,0 +1,11 @@
+.border--light {
+	border: 1px solid tint( $secondary, 90% );
+}
+
+.border-light--top {
+	border-top: 1px solid tint( $secondary, 10% );
+}
+
+.border-light--bottom {
+	border-bottom: 1px solid tint( $secondary, 10% );
+}

@@ -1,0 +1,31 @@
+/* Lists
+-------------------------------------------------------------- */
+
+.list--trending {
+	li {
+		a,
+		button {
+			background: transparent;
+			border-bottom: 1px dotted tint( $secondary, 10% );
+			display: block;
+			margin-bottom: $baseline/4;
+			padding-bottom: $baseline/4;
+			text-align: left;
+			width: 100%;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	&.list--dark {
+		li {
+			a {
+				border-bottom: 1px dotted tint( $secondary, 60% );
+				color: $secondary;
+				&:hover {
+					color: tint( $secondary, 30% );
+				}
+			}
+		}
+	}
+}

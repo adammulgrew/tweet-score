@@ -1,0 +1,302 @@
+/* Grid
+-------------------------------------------------------------- */
+@function column-calc($num, $spacing:$gutter){
+    @return calc(((99.999% / #{$columns}) * #{$num}) - (#{0px}));
+}
+@function column-calc-fallback($num){
+    @return ((100 / $columns) * $num) - 5%;
+}
+@mixin column($num) {
+    width: column-calc-fallback($num);
+    width: column-calc($num);
+}
+
+.wrapper {
+    @include clearfix;
+    width:93%;
+    clear:both;
+    margin:0 auto;
+    max-width:$max-container-width;
+}
+
+.row {
+    @include clearfix;
+    margin-left:-$baseline/2;
+    margin-right:-$baseline/2;
+        &:after {
+            content:'';
+            display: table;
+        }
+}
+.col {
+    float:left;
+    padding-left:$baseline/2;
+    padding-right:$baseline/2;
+}
+
+/* X Small */ 
+
+.xsmall-12 {
+    @include column(12);
+}
+
+.xsmall-10 {
+    @include column(10);
+}
+
+.xsmall-9 {
+    @include column(9);
+}
+
+.xsmall-8 {
+    @include column(8);
+}
+
+.xsmall-7 {
+    @include column(7);
+}
+
+.xsmall-6 {
+    @include column(6);
+}
+
+.xsmall-5 {
+    @include column(5);
+}
+
+.xsmall-4 {
+    @include column(4);
+}
+
+.xsmall-3 {
+    @include column(3);
+}
+
+.xsmall-2 {
+    @include column(2);
+}
+
+
+/* Small */
+
+.small-12 {
+    @media (min-width:$bp-small) {
+        @include column(12);
+    }
+}
+
+.small-10 {
+    @media (min-width:$bp-small) {
+        @include column(10);
+    }
+}
+
+.small-9 {
+    @media (min-width:$bp-small) {
+        @include column(9);
+    }
+}
+
+.small-8 {
+    @media (min-width:$bp-small) {
+        @include column(8);
+    }
+}
+
+.small-7 {
+    @media (min-width:$bp-small) {
+        @include column(7);
+    }
+}
+
+.small-6 {
+    @media (min-width:$bp-small) {
+        @include column(6);
+    }
+}
+
+.small-5 {
+    @media (min-width:$bp-small) {
+        @include column(5);
+    }
+}
+
+.small-4 {
+    @media (min-width:$bp-small) {
+        @include column(4);
+    }
+}
+
+.small-3 {
+    @media (min-width:$bp-small) {
+        @include column(3);
+    }
+}
+
+.small-2 {
+    @media (min-width:$bp-small) {
+        @include column(2);
+    }
+}
+
+/* Medium */
+
+.medium-12 {
+    @media (min-width:$bp-medium) {
+        @include column(12);
+    }
+}
+
+.medium-10 {
+    @media (min-width:$bp-medium) {
+        @include column(10);
+    }
+}
+
+.medium-9 {
+    @media (min-width:$bp-medium) {
+        @include column(9);
+    }
+}
+
+.medium-8 {
+    @media (min-width:$bp-medium) {
+        @include column(8);
+    }
+}
+
+.medium-7 {
+    @media (min-width:$bp-medium) {
+        @include column(7);
+    }
+}
+
+.medium-6 {
+    @media (min-width:$bp-medium) {
+        @include column(6);
+    }
+}
+
+.medium-5 {
+    @media (min-width:$bp-medium) {
+        @include column(5);
+    }
+}
+
+.medium-4 {
+    @media (min-width:$bp-medium) {
+        @include column(4);
+    }
+}
+
+.medium-3 {
+    @media (min-width:$bp-medium) {
+        @include column(3);
+    }
+}
+
+.medium-2 {
+    @media (min-width:$bp-medium) {
+        @include column(2);
+    }
+}
+
+/* Large */
+
+.large-12 {
+    @media (min-width:$bp-large) {
+        @include column(12);
+    }
+}
+
+.large-10 {
+    @media (min-width:$bp-large) {
+        @include column(10);
+    }
+}
+
+.large-9 {
+    @media (min-width:$bp-large) {
+        @include column(9);
+    }
+}
+
+.large-8 {
+    @media (min-width:$bp-large) {
+        @include column(8);
+    }
+}
+
+.large-7 {
+    @media (min-width:$bp-large) {
+        @include column(7);
+    }
+}
+
+.large-6 {
+    @media (min-width:$bp-large) {
+        @include column(6);
+    }
+}
+
+.large-5 {
+    @media (min-width:$bp-large) {
+        @include column(5);
+    }
+}
+
+.large-4 {
+    @media (min-width:$bp-large) {
+        @include column(4);
+    }
+}
+
+.large-3 {
+    @media (min-width:$bp-large) {
+        @include column(3);
+    }
+}
+
+.large-2 {
+    @media (min-width:$bp-large) {
+        @include column(2);
+    }
+}
+
+//Grid modifiers
+.col--centre {
+    margin:0 auto;
+}
+
+
+//Offsets
+
+.medium-offset--1 {
+    @media (min-width:$bp-medium) {
+        margin-left: column-calc(1);
+    }
+}
+
+.small-offset--4 {
+    @media (min-width:$bp-small) {
+        margin-left: column-calc(4);
+    }
+}
+
+.small-offset--2 {
+    @media (min-width:$bp-small) {
+        margin-left: column-calc(2);
+    }
+}
+
+.small-offset--1 {
+    @media (min-width:$bp-small) {
+        margin-left: column-calc(1);
+    }
+}
+
+.xsmall-offset--1 {
+    @media (min-width:$bp-xsmall) {
+        margin-left: column-calc(1);
+    }
+}

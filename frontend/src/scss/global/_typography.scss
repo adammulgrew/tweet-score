@@ -1,0 +1,127 @@
+/* Type
+-------------------------------------------------------------- */
+body,
+button,
+input,
+select,
+textarea {
+    font:$base-font-weight $base-font-size $body-font-family;
+    line-height:$base-line-height;
+    color:$body-font-color;
+}
+
+input,
+select,
+textarea {
+    font-size:.99rem;
+    line-height:1rem;
+}
+
+b,
+strong {
+    font-weight: $bold;
+}
+
+//general headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom:0;
+    font-weight:$regular;
+    line-height:1.2;
+}
+.tera {
+    font-size: $tera-size;
+}
+
+.giga {
+    font-size: $giga-size;
+}
+
+h1,
+.mega {
+    font-size:$mega-size;
+    margin-bottom:$baseline;
+}
+h2,
+.alpha {
+    font-size:$gamma-size;
+    @media (min-width: $bp-small) {
+        font-size:$alpha-size;
+    }
+}
+h3,
+.beta {
+    font-size:$beta-size;
+}
+h4,
+.gamma {
+    font-size:$gamma-size;
+}
+h5,
+.delta {
+    font-size:$epsilon-size;
+    @media (min-width: $bp-small) {
+        font-size:$delta-size;
+    }
+}
+h6,
+.epsilon {
+    font-size:$epsilon-size;
+}
+.mini {
+    font-size: ms(-1);
+}
+p {
+    font-size:$epsilon-size;
+    margin-bottom:$baseline;
+}
+
+//weights 
+
+.thin {
+    font-weight: 100 !important;
+}
+.light {
+    font-weight: 300 !important;
+}
+.semi-bold {
+    font-weight: 600 !important;
+}
+.bold {
+    font-weight: bold !important;
+}
+.extra-bold {
+    font-weight: 900 !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.letter-spacing {
+    letter-spacing: 1px;
+}
+
+.text-center {
+    text-align:center; 
+}
+
+//general links
+a,
+a:link,
+.link {
+    color:$body-font-color;
+}
+a:hover,
+a:focus,
+a:active {
+}
+
+//font-fallback
+.no-webfonts:not(.no-js) * {
+    font-family:sans-serif;
+}

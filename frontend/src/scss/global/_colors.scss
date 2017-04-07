@@ -1,0 +1,33 @@
+.bg-primary {
+	background: $primary !important;
+}
+
+.primary {
+	color: $primary !important;
+}
+
+.bg-secondary {
+	background: $secondary !important;
+	&--95 {
+		background: tint( $secondary, 95% );
+	}
+}
+
+.secondary {
+	color: $secondary !important;
+	&--60 {
+		color: tint( $secondary, 60% );
+	}
+	&--40 {
+		color: tint( $secondary, 40% );
+	}
+}
+
+.bg-white {
+	background: #fff !important;
+}
+
+.white {
+	background: #fff !important;
+}
+

@@ -1,0 +1,13 @@
+{% include "partials/doc-head.html" %}
+<body>
+    <div class="skip">
+        <a class="btn btn-skip" tabindex="0" href="content">Skip to main content</a>
+    </div>
+    {% include "partials/ui-header.html" %}
+     
+    {% block content %}{% endblock %}
+    
+    {% include "partials/ui-footer.html" %}
+    <script src="{{assetPath}}/js/app.js"></script>
+</body>
+</html>

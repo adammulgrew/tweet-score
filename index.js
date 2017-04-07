@@ -1,8 +1,8 @@
 require('dotenv').config();
 var request = require('request');
-var ENDPOINT = 'https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/';
-var KEY = 'f495997a78dd437ca4eb40ea4932aee8';
-var Twitter = require('twitter');
+var ENDPOINT = process.env.MCS_ENDPOINT,
+var KEY = process.env.MCS_KEY,
+var Twitter = require('twitter');npm insta
 
 var client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
