@@ -1,0 +1,37 @@
+body {
+    background:#f1f1f1;
+    font:16px sans-serif;
+}
+form {
+    width:80%;
+    margin:0 auto;
+    padding:50px 0;
+    max-width:600px;
+}
+form[disabled]{
+    opacity:.6
+}
+input {
+    width:100%;
+    border:0 none;
+    border-bottom:1px solid #555;
+    font-size:1.25rem;
+    background-color: transparent;
+    padding:.25rem
+}
+input:focus {
+    border-bottom:1px solid #555
+}
+button {
+    background:transparent;
+    text-decoration:underline;
+    border:0 none;
+    font-size:1rem;
+}
+.is--searching {
+    width:80%;
+    margin:0 auto;
+    max-width:600px;
+    margin-top:20%;
+    text-align: center;
+}

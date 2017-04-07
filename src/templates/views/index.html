@@ -1,0 +1,24 @@
+{% extends 'layouts/default.html' %}
+{% block content %}
+<div class="js-bd">
+    <form action="/search" method="post" class="search">
+        <input type="text" name="q" id="q" placeholder="Get a tweet score">
+    </form>
+
+    <form action="/search" method="post" class="search">
+        <input type="hidden" value="Ghost in the shell" name="q">
+        <button>Ghost in the shell</button>
+    </form>
+</div>
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            [].slice.call(document.querySelectorAll('.search')).forEach(function(el){
+                el.addEventListener('submit', function(e){
+                    window.setTimeout(function(){
+                        document.querySelector('.js-bd').innerHTML = '<div class="is--searching"><img src="/img/loading-balls.gif"></div>';
+                    }, 10);
+            });
+            });
+        });
+    </script>
+{% endblock %}

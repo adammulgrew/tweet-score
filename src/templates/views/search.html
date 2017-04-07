@@ -1,0 +1,12 @@
+{% extends 'layouts/default.html' %}
+{% block content %}
+    <div class="query">{{q}}</div>
+    <div class="score">{{score}}</div>
+    <div class="keywords">
+        <ul>
+            {% for item in keywords %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

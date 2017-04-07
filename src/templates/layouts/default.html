@@ -1,0 +1,11 @@
+{% include "partials/doc-head.html" %}
+<body>
+    {% include "partials/ui-header.html" %}
+    <main id="content">
+        <div class="small-12 col--centre">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    {% include "partials/ui-footer.html" %}
+</body>
+</html>
