@@ -1,24 +1,233 @@
 {% extends 'layouts/default.html' %}
 {% block content %}
-<div class="js-bd">
-    <form action="/search" method="post" class="search">
-        <input type="text" name="q" id="q" placeholder="Get a tweet score">
-    </form>
+<main class="js-bd">
+     <div class="bg-secondary">
+        <div class="wrapper soft--ends">
+            <div class="xsmall-12 small-3">
+                <h3 class="epsilon secondary--60 push-half--bottom uppercase letter-spacing mini">Trending <i class="icon icon-chart primary"></i></h3>
+            </div>
+            <div class="row">
+                <div class="col xsmall-12 small-3">
+                    <ul class="light list--trending">
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Ghost in the Shell" name="q">
+                                <button>Ghost in the Shell</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Free Fire" name="q">
+                                <button>Free Fire</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Logan" name="q">
+                                <button>Logan</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Get Out" name="q">
+                                <button>Get Out</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="The Fate of the Furious" name="q">
+                                <button>The Fate of the Furious</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col xsmall-12 small-3">
+                    <ul class="light list--trending">
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Ghost in the Shell" name="q">
+                                <button>Ghost in the Shell</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Free Fire" name="q">
+                                <button>Free Fire</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Logan" name="q">
+                                <button>Logan</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Get Out" name="q">
+                                <button>Get Out</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="The Fate of the Furious" name="q">
+                                <button>The Fate of the Furious</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col xsmall-12 small-3">
+                    <ul class="light list--trending">
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Ghost in the Shell" name="q">
+                                <button>Ghost in the Shell</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Free Fire" name="q">
+                                <button>Free Fire</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Logan" name="q">
+                                <button>Logan</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Get Out" name="q">
+                                <button>Get Out</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="The Fate of the Furious" name="q">
+                                <button>The Fate of the Furious</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col xsmall-12 small-3">
+                    <ul class="light list--trending">
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Ghost in the Shell" name="q">
+                                <button>Ghost in the Shell</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Free Fire" name="q">
+                                <button>Free Fire</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Logan" name="q">
+                                <button>Logan</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="Get Out" name="q">
+                                <button>Get Out</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="/search" method="post" class="search">
+                                <input type="hidden" value="The Fate of the Furious" name="q">
+                                <button>The Fate of the Furious</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search-overlay">
+            <div class="wrapper soft--top search__wrapper">
+                <h1 class="text-center tera bold flush">Find a Tweet Score</h1>
+                <p class="light text-center secondary--60 flush">Search for films, TV shows, albums, celebrities, sports teams etc to find out what people are saying...</p>
+                <div class="col--centre xsmall-10">
+                    <form action="/search" method="post" class="search">
+                        <input class="search" type="text" name="q" id="q" placeholder="Get a tweet score">
+                        <button class="search__button"><i class="icon icon-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-secondary--95 soft-double--bottom">
+        <main id="content" class="wrapper">
+            <div class="col--centred xsmall-12 soft--top">
+				<h2 class="text-center secondary light mega push-half--bottom">Categories</h2>
+				<div class="separator push-double--bottom"></div>
+			</div>
 
-    <form action="/search" method="post" class="search">
-        <input type="hidden" value="Ghost in the shell" name="q">
-        <button>Ghost in the shell</button>
-    </form>
-</div>
-    <script>
-        window.addEventListener('DOMContentLoaded', function(){
-            [].slice.call(document.querySelectorAll('.search')).forEach(function(el){
-                el.addEventListener('submit', function(e){
-                    window.setTimeout(function(){
-                        document.querySelector('.js-bd').innerHTML = '<div class="is--searching"><img src="/img/loading-balls.gif"></div>';
-                    }, 10);
-            });
-            });
-        });
-    </script>
+			<div class="row">
+				<div class="col xsmall-12 small-3">
+					<h3 class="secondary--40 letter-spacing uppercase mini semi-bold push-half--bottom">Film</h3>
+					<ul class="list--trending list--dark push--bottom">
+			            <li><a href="">Ghost in the Shell</a></li>
+			            <li><a href="">Free Fire</a></li>
+			            <li><a href="">Raw</a></li>
+			            <li><a href="">Get Out</a></li>
+			            <li><a href="">The Fate of the Furious</a></li>
+			        </ul>
+				</div>
+				<div class="col xsmall-12 small-3">
+					<h3 class="secondary--40  letter-spacing uppercase mini semi-bold push-half--bottom">TV</h3>
+					<ul class="list--trending list--dark push--bottom">
+			            <li><a href="">Better Call Saul</a></li>
+			            <li><a href="">Louis CK: 2017</a></li>
+			            <li><a href="">The Walking Dead</a></li>
+			            <li><a href="">Big Little Lies</a></li>
+			            <li><a href="">13 Reasons Why</a></li>
+			        </ul>
+				</div>
+				<div class="col xsmall-12 small-3">
+					<h3 class="secondary--40 letter-spacing uppercase mini semi-bold push-half--bottom">Music</h3>
+					<ul class="list--trending list--dark push--bottom">
+			            <li><a href="">Future - Future</a></li>
+			            <li><a href="">More Life - Drake</a></li>
+			            <li><a href="">Heartworms - The Shins</a></li>
+			            <li><a href="">Divide - Ed Sheeran</a></li>
+			            <li><a href="">Prisoner - Ryan Adams</a></li>
+			        </ul>
+				</div>
+				<div class="col xsmall-12 small-3">
+					<h3 class="secondary--40 letter-spacing uppercase mini semi-bold push-half--bottom">Games</h3>
+					<ul class="list--trending list--dark push-double--bottom">
+			            <li><a href="">Persona 5</a></li>
+			            <li><a href="">The Legend of Zelda</a></li>
+			            <li><a href="">Horizon: Zero Dawn</a></li>
+			            <li><a href="">Mass Effect: Andromeda</a></li>
+			            <li><a href="">Bulletstorm</a></li>
+			        </ul>
+				</div>
+				<div class="col xsmall-12 small-3">
+					<h3 class="secondary--40 letter-spacing uppercase mini semi-bold push-half--bottom">People</h3>
+					<ul class="list--trending list--dark push--bottom">
+			            <li><a href="">Donald Trump</a></li>
+			            <li><a href="">Kendall Jenner</a></li>
+			            <li><a href="">Brendan Rodgers</a></li>
+			            <li><a href="">Theresa May</a></li>
+			            <li><a href="">Lewis Hamilton</a></li>
+			        </ul>
+				</div>
+				<div class="col xsmall-12 small-3">
+					<h3 class="secondary--40 letter-spacing uppercase mini semi-bold push-half--bottom">Sports</h3>
+					<ul class="list--trending list--dark push--bottom">
+			            <li><a href="">Manchester United</a></li>
+			            <li><a href="">Sergio Garcia</a></li>
+			            <li><a href="">Arsene Wenger</a></li>
+			            <li><a href="">Daniel Cormier</a></li>
+			            <li><a href="">Romelu Lukaku</a></li>
+			        </ul>
+				</div>
+			</div>
+        </main>
+    </div>
+</main>
 {% endblock %}

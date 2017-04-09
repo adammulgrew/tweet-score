@@ -1,12 +1,24 @@
 {% extends 'layouts/default.html' %}
 {% block content %}
-    <div class="query">{{q}}</div>
-    <div class="score">{{score}}</div>
+<div class="bg-secondary">
+    <div class="wrapper soft-double--ends">
+        <div class="col--centre xsmall-10">
+            <div class="col xsmall-12 small-8">
+                <h1 class="title tera bold query">{{q}}</h1>
+            </div>
+            <div class="col xsmall-12 small-4">
+                <div class="score">{{score}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-secondary--40">
     <div class="keywords">
-        <ul>
+        <ul class="list--trending list--dark">
             {% for item in keywords %}
             <li>{{item}}</li>
             {% endfor %}
         </ul>
     </div>
+</div>
 {% endblock %}

@@ -35,7 +35,7 @@ app.post('/search', function(req, res){
         .then(function(output){
             res.render('views/search', { 
                 q: req.body.q,
-                score: output.sentiment,
+                score: (output.sentiment * 10).toFixed(1),
                 keywords: output.keywords
             });
         });

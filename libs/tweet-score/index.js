@@ -41,7 +41,6 @@ var getTweets = function(q){
     return new Promise(function(resolve, reject){
         client.get('search/tweets', {q: q + '  -filter:retweets', lang: 'en', count: 100}, function(error, tweets, response) {
             if(error) reject(error);
-
             resolve(tweets.statuses.map(function(tweet, i){ 
                 return  {
                     "language": "en",

@@ -1,14 +1,17 @@
-//import './polyfills';
-import styles from '../css/app.css';
+import './polyfills';
 import CONSTANTS from './constants';
-import Map from './require/map';
 
-//when DOMContentLoaded, run these tasks
 const onDOMContentLoadedTasks = [
-	Map,
 	() => {
-		if ('serviceWorker' in navigator) window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js') });
+		if(!document.querySelector(CONSTANTS.SEARCH.SELECTOR.INPUT)) return;
+
+		[].slice.call(document.querySelectorAll(CONSTANTS.SEARCH.SELECTOR.INPUT)).forEach(el => {
+			el.addEventListener('submit', e => {
+				window.setTimeout(() => {
+					document.querySelector(CONSTANTS.SEARCH.SELECTOR.BODY).innerHTML = '<div class="is--searching"><img src="/img/loading-balls.gif"></div>';
+				}, 10);
+			});
+		});
 	}
 ];
-if('addEventListener' in window)
-    !!onDOMContentLoadedTasks.length && window.addEventListener('DOMContentLoaded', () => { onDOMContentLoadedTasks.forEach((fn) => fn()); });
+if('addEventListener' in window) window.addEventListener('DOMContentLoaded', () => { onDOMContentLoadedTasks.forEach((fn) => fn()); });
