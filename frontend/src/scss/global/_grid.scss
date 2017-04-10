@@ -11,6 +11,23 @@
     width: column-calc($num);
 }
 
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+.is--searching {
+  text-align: center;
+  padding-top:24px;
+}
+.is--searching img {
+  margin:0 auto;
+}
+
 .wrapper {
     @include clearfix;
     width:93%;
