@@ -28,4 +28,8 @@
 			}
 		}
 	}
+	&.list--col {
+		    column-count: 4;
+		    column-gap: $baseline*2;
+	}
 }

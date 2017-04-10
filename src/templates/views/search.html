@@ -12,13 +12,17 @@
         </div>
     </div>
 </div>
-<div class="bg-secondary--40">
-    <div class="keywords">
-        <ul class="list--trending list--dark">
+<main class="bg-secondary--40">
+    <div class="wrapper keywords push--top push-double--bottom">
+        <div class="col--centred xsmall-12 soft--top">
+            <h2 class="text-center secondary light mega push-half--bottom">Keywords</h2>
+            <div class="separator push-double--bottom"></div>
+        </div>
+        <ul class="list--trending list--dark list--col">
             {% for item in keywords %}
-            <li>{{item}}</li>
+            <li class="secondary">{{item}}</li>
             {% endfor %}
         </ul>
     </div>
-</div>
+</main>
 {% endblock %}
